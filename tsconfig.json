@@ -2,6 +2,7 @@
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
+    "mapRoot": "./",
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "declaration": false,
@@ -17,10 +18,23 @@
     "lib": [
       "es2018",
       "dom"
-    ]
-  },
-  "angularCompilerOptions": {
-    "fullTemplateTypeCheck": true,
-    "strictInjectionParameters": true
+    ],
+    "paths": {
+      "@common/*": [
+        "./src/app/@common/*"
+      ],
+      "@shared/*": [
+        "./src/app/shared/*"
+      ],
+      "@core/*": [
+        "./src/app/core/*"
+      ],
+      "@environments/*": [
+        "./src/environments/*"
+      ],
+      "@auth/*": [
+        "./src/app/shared/auth/*"
+      ]
+    }
   }
 }

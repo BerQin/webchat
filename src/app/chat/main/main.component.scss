@@ -1,0 +1,124 @@
+:host{
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgb(51,51,51);
+  padding: 40px;
+  .button-open{
+    color: #fff;
+    font-size: 18px;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+  }
+  .right-box{
+    padding: 15px;
+    flex: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    .top-view{
+      flex: 1;
+      position: relative;
+      .contnet-box{
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 15px;
+        background: #fff;
+        overflow: auto;
+        .item{
+          margin: 6px;
+          &.left{
+            text-align: left;
+          }
+          &.right{
+            text-align: right;
+          }
+          .block{
+            width: 60%;
+            display: inline-block;
+          }
+        }
+      }
+    }
+    .shuru-view{
+      height: 120px;
+      display: flex;
+      .btn-box{
+        width: 60px;
+        color: #fff;
+        background: #1890ff;
+        text-align: center;
+        line-height: 120px;
+        height: 120px;
+        cursor: pointer;
+        font-size: 18px;
+        border-radius: 0 0 4px 0;
+      }
+    }
+  }
+}
+
+
+.left-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 1px solid #fff;
+  border-radius: 4px 0 0 4px;
+  background: #666;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  .user-info{
+    cursor: pointer;
+    display: flex;
+    .username{
+      flex: 1;
+      line-height: 50px;
+      color: #fff;
+      margin-left: 10px;
+    }
+    .face{
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      color: #fff;
+      text-align: center;
+      line-height: 50px;
+      background: #333;
+      border: 1px solid #b5b5b5;
+    }
+  }
+  .btn-box{
+    text-align: right;
+  }
+  .user-list{
+    position: relative;
+    flex: 1;
+    .list-box{
+      position: absolute;
+      top: 15px;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      overflow: auto;
+      padding: 0;
+      .item{
+        padding: 6px 5px;
+        color: #fff;
+        cursor: pointer;
+        &.active{
+          background: #1890ff;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+:host {
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background: rgb(26,65,71);
+  text-align: center;
+  .footer{
+    text-align: center;
+  }
+  .login-box{
+    display: inline-block;
+    width: 90%;
+    margin-top: 20%;
+    background: #fff;
+    padding: 30px;
+    box-sizing: border-box;
+    .form-item{
+      width: 100%;
+    }
+  }
+}

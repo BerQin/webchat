@@ -1,0 +1,90 @@
+<nz-drawer
+  [nzClosable]="false"
+  [nzVisible]="visible"
+  nzPlacement="left"
+  nzTitle="好友列表"
+  (nzOnClose)="close()"
+>
+  <div class="left-box">
+    <div class="user-info">
+      <div class="face">
+        {{page?.userInfo?.name | str}}
+      </div>
+      <div class="username">
+        <a nz-dropdown [nzDropdownMenu]="menu">
+          {{page?.userInfo?.name}}
+          <i nz-icon nzType="down"></i>
+        </a>
+        <nz-dropdown-menu #menu="nzDropdownMenu">
+          <ul nz-menu nzSelectable>
+            <li nz-menu-item (click)="logout()" >退出</li>
+          </ul>
+        </nz-dropdown-menu>
+      </div>
+    </div>
+    <div class="btn-box">
+      <button nz-button nzSize="small" nzType="default">添加好友</button>
+    </div>
+    <div class="user-list">
+      <ul class="list-box">
+        <li class="item">你阿斯顿快乐就好</li>
+        <li class="item">你阿斯顿快乐就好</li>
+        <li class="item">你阿斯顿快乐就好</li>
+        <li class="item">你阿斯顿快乐就好</li>
+        <li class="item">你阿斯顿快乐就好</li>
+        <li class="item">你阿斯顿快乐就好</li>
+        <li class="item">你阿斯顿快乐就好</li>
+        <li class="item">你阿斯顿快乐就好</li>
+        <li class="item">你阿斯顿快乐就好</li>
+        <li class="item">你阿斯顿快乐就好</li>
+        <li class="item">你阿斯顿快乐就好</li>
+        <li class="item">你阿斯顿快乐就好</li>
+        <li class="item">你阿斯顿快乐就好</li>
+        <li class="item">你阿斯顿快乐就好</li>
+        <li class="item">你阿斯顿快乐就好</li>
+        <li class="item">你阿斯顿快乐就好</li>
+        <li class="item">你阿斯顿快乐就好</li>
+        <li class="item">你阿斯顿快乐就好</li>
+        <li class="item">你阿斯顿快乐就好</li>
+        <li class="item">你阿斯顿快乐就好</li>
+        <li class="item">你阿斯顿快乐就好</li>
+        <li class="item">你阿斯顿快乐就好</li>
+        <li class="item">你阿斯顿快乐就好</li>
+        <li class="item">你阿斯顿快乐就好</li>
+        <li class="item">你阿斯顿快乐就好</li>
+        <li class="item">你阿斯顿快乐就好</li>
+        <li class="item">你阿斯顿快乐就好</li>
+        <li class="item">你阿斯顿快乐就好</li>
+        <li class="item">你阿斯顿快乐就好</li>
+        <li class="item">你阿斯顿快乐就好</li>
+      </ul>
+    </div>
+  </div>
+</nz-drawer>
+<div class="button-open" (click)="open($event)">
+  <i nz-icon nzType="menu" nzTheme="outline"></i>
+</div>
+<div class="right-box">
+  <div class="top-view">
+    <div class="contnet-box"  >
+      <div class="item left">
+        <div class="block">
+          <span>对方：</span>
+          <span>我说这很好</span>
+        </div>
+      </div>
+      <div class="item right">
+        <div class="block">
+          <span>我方：</span>
+          <span>是的很好很好</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="shuru-view">
+    <textarea nz-input></textarea>
+    <div class="btn-box">
+      发送
+    </div>
+  </div>
+</div>

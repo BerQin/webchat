@@ -1,0 +1,32 @@
+<div class="login-box">
+  <h1>登陆</h1>
+  <form nz-form [formGroup]="formgroup" (submit)="submit($event)" class="login-form">
+    <nz-form-item>
+      <nz-form-control [nzSpan]="12" class="form-item" [nzErrorTip]="userErrorTpl" >
+        <nz-input-group nzPrefixIcon="user">
+          <input nz-input placeholder="用户名" formControlName="username">
+        </nz-input-group>
+      </nz-form-control>
+      <ng-template #userErrorTpl let-control>
+        <ng-container *ngIf="formgroup.get('username')?.hasError('required')">
+            用户名必填项
+        </ng-container>
+      </ng-template>
+    </nz-form-item>
+    <nz-form-item>
+      <nz-form-control [nzSpan]="12" class="form-item" [nzErrorTip]="passErrorTpl" >
+        <nz-input-group nzPrefixIcon="lock">
+          <input nz-input type="password" placeholder="密码" formControlName="password">
+        </nz-input-group>
+      </nz-form-control>
+      <ng-template #passErrorTpl let-control>
+        <ng-container *ngIf="formgroup.get('password')?.hasError('required')">
+            密码必填项
+        </ng-container>
+      </ng-template>
+    </nz-form-item>
+    <div class="footer">
+      <button nz-button nzType="primary" [disabled]="!formgroup.valid">登陆</button>
+    </div>
+  </form>
+</div>
